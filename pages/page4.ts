@@ -11,7 +11,6 @@ export class proPlan {
     this.page = page;
 
     this.testProPlanBtn = page.getByRole('button', { name: 'Try Pro for 30 days free' });
-    this.advancedPlanBtn = page.locator('//*[@class="button--OnFFo variant_contained--P6Etj color_primaryAlt--X2utV"]');
     this.contactForm = page.locator('.contactUsFormFrame-module--formWrapper--vFbUC');
     this.contactSalesBtn = page.getByRole('link', { name: 'Contact Sales' }).first();
   }

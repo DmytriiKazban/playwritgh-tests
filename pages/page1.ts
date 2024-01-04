@@ -2,8 +2,6 @@ import { expect, type Locator, type Page } from '@playwright/test';
 
 export class mainPage {
   readonly page: Page;
-
-  readonly : Locator;
   readonly selectSoruceLanguage: Locator;
   readonly selectTargetLanguage: Locator;
   readonly Eng: Locator;
@@ -19,7 +17,7 @@ export class mainPage {
     this.Eng = page.getByTestId('translator-lang-option-en-US');
     this.Ukr = page.getByTestId('translator-lang-option-uk');
     this.sourceLangTypeField = page.getByTestId('translator-source-input').getByLabel('Source text');
-    this.targetLangTypeField = page.getByTestId('translator-target-input').getByRole('paragraph');
+    this.targetLangTypeField = page.getByTestId('translator-target-input').getByLabel('Translation results');
   }
 
   async goTo() {
